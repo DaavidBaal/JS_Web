@@ -1,5 +1,9 @@
+html{
+	background-color: skyblue;
+}
 body {
 	margin: 3em 9em;
+	border: solid;
 	}
 header {
 	width: 50%;
@@ -29,7 +33,6 @@ form {
 	width: 100%;
 	margin: 1em;
 	padding: 1em 0em;
-	background-color: beige;
 	overflow: hidden;
 	}				
 
@@ -59,4 +62,9 @@ p + p {
 	font-size: 1.2em;
 	font-weight: 700;
 	padding-left: 0.3em;
-}		
+}
+
+div{
+	font-size: 30px; color: white;
+
+}
