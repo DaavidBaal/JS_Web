@@ -7,13 +7,13 @@ $(function main  () {
 	//let jq = $("#primera")
 
 	let js = document.querySelectorAll("section")
-	let jq =$("section").
+	let jq =$("section")
 	
 
 	console.dir(js)
 	console.dir(jq)
 	
 	
-	$("section").append() = "<p>Hola</p>"
+	$("section").append() = "<p>Hola,soy un hijo</p>"
 })
 
