@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Daavid">
+    <meta name="description" content="Formulario">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Visual Studio Code. Versión 1.12.1">
+    <title>Formulario</title>
+					<!--*********CSS***********-->
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+					<!--*********Favicon***********-->
+    
+					<!--*********JQuery***********-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <form method="post" action="https://www.google.es/search" name="formu" id="formu">
+        <fieldset>
+            Datos Alumno
+            <fieldset id="parte1">
+                <legend>
+                    Identificación
+                </legend>
+                <p>
+                    <label for="email">Cuenta de correo</label>
+                    <input type="text" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+                </p>
+                <p>
+                    <label for="password">Introduzca su clave de acceso</label>
+                    <input type="password" name="password" required>
+                </p>
+                <p>
+                    <label for="password">Repita su clae de acceso</label>
+                    <input type="password" name="password" required>
+                </p>
+
+            </fieldset>
+            <fieldset  id="parte2">
+                <legend>Curso</legend>
+                <ul>
+                    <li><input type="radio" name="programador" value="W"><label for="">Programador Web</label></li>
+                    <li><input type="radio" name="programador" value="S"><label for="">Programador de Sistemas</label></li>
+                    <li><input type="radio" name="programador" value="O"><label for="">Programador de objetos</label></li>
+                    <!-- Hay que darle un valor a los value porque es el atributo que se envía-->
+                </ul>
+                
+                <p>
+                    <select name="Program" size="4">
+                        <optgroup>
+                            <option value="H">HTML</option>
+                            <option value="C">CSS</option>
+                            <option value="JS">JavaScript</option>
+                            <option value="P">PHP</option>
+                        </optgroup>  
+                    </select>
+                </p>
+            </fieldset>
+
+        <fieldset>
+            <input type="submit" value="Enviar Datos">
+            <input type="reset" value="Reestablecer valores">
+        </fieldset>
+        </fieldset>
+    </form>
+  
+   
+    <footer>
+
+    </footer>
+<script src="js/main.js"></script>
+</body>
+</html>
