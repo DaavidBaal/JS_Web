@@ -1,0 +1,46 @@
+body {
+	margin: 3em 9em;
+	background-color: burlywood;
+	}
+header {
+	width: 50%;
+	margin: 2em auto 4em auto;
+	padding: 2em 1em;
+	background-color: blue ;
+	color: white;
+	color: beige;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px 2px silver;
+	}
+ footer {
+ 	margin-top:  2em;
+ 	border-top: solid 1px silver;
+ 	color: maroon;
+ 	}
+ header, footer {
+ 	text-align: center;
+ 	}
+	
+nav{
+	background-color: sienna;
+	text-align: center;
+	}
+
+article, section{
+	width: 80%;
+	margin: 1em auto;
+	background-color:whitesmoke;
+}
+
+#color1{
+ background-color: yellow}
+
+#color2{
+	background-color: orange; 
+}
+#color3{
+	background-color: red;
+}
+input:required{
+	border: 2px solid darkblue;
+}

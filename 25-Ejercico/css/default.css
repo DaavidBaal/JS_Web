@@ -1,60 +1,49 @@
-/******* Hoja de estilos ******/
-
-html,body { 
- 	margin: 0.3%; 
- 	padding: 0.2%; 
-    color: navy; 
-    background: silver; 
-    font-family: Sans-serif; }
-
-h3 { text-align: center;}
-
-label {
-  	display:block;
-  	padding: 0.5em 1em;
+html:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/internet1.jpg);
+        opacity: 0.1;
+        overflow:auto;
+        z-index: -1;
     }
-label.line {
-  	display: inline;
-  	 }
 
-fieldset { 
-  	background: steelblue; 
-  	color:white; 
-  	margin-bottom: 1%; 
-  	padding:1% }
-
-legend { 
-  	background: navy;  
-  	color:white; 
-  	font-weight: bolder; 
-  	border: 1px solid }
-
-.Izquierda {
-  	float: left; 
-  	margin-right: 1%; 
-  	clear: left; 
-  	width: 44%  }
-
-.Derecha { 
-  	float: right;
-  	width: 44% }
-
-#fsCurso div.Izquierda {width: 60%}
-#fsCurso div.Derecha {width: 30%}
-
-button {  margin-left: 1.5%; }
-
-.aficiones{ margin-left: 2%;}
-
-span.label {
-	display: block;
-	float: left;
-	width: 50%;}
-
-#fsFecha span.label {
-	width:10%;
-	text-align: center;
+body {
+    margin: 3em 9em;      
+}
+header {text-align: center;
+		background-color: maroon;
+		color: white;
+		margin-bottom: 6em}
+.oculto {
+    display: none;
 }
 
-input {
-	float: left;
+label {
+    font-weight:700;
+    display: inline-block;
+    width: 20%;
+}
+    label.long {
+        width: auto;
+        margin-right: 0.5em;
+    }
+    label.top {
+        vertical-align: top;
+    }
+ul {list-style: none;}
+li:nth-child(2n) {
+    background-color: beige;
+}
+li:nth-child(2n+1) {
+   background-color: silver;
+}
+footer { margin-top: 2em; }
+footer p {margin: 0px auto}
+
+input:required{
+	border: 2px solid darkblue;
+}
