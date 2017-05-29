@@ -17,15 +17,24 @@ class Formulario {
          }
 //AJAX 3:Realizar la peticion al servidor
          perdirAjax(){
-this.oAjax.open("GET", "http://localhost:8080/Saludos.txt", true)
+this.oAjax.open("GET", "http://localhost:8012/Js_Web/Ajax/?", true)
 this.oAjax.send(null);
          }
 //AJAX 2b: Preparar la función de respuesta
         actualizarVista (){
+            let oDatos
+            let sHtml = "<ul>"
             if(this.oAjax.readyState == 4){
             if(this.oAjax.status ==200){
-                this.oDOM.pSaludo.innerHTML = this.oAjax.responseText;
-                }    
+
+                oDatos = JSON.parse(this.oAjax.responseText)
+                console.dir(this.oAjax.responseText)
+                console.dir(oDatos)
+                
+                
+            } else{
+                thi.oDOM.pSaludo.innerHTML = this.oAjax.statusText
+            }    
         }
             
     }
