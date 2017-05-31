@@ -16,10 +16,13 @@
 
         constructor () {
             this.oDatos = {"Nombre": "",
-                        "Apellidos": "",
-                        "Dirección": "",
-                        "Ciudad": "",
-                        "Comentarios": "",
+                            "Apellidos": "",
+                            "Dirección": "",
+                            "Ciudad": "",
+                            "Comentarios": "",
+                            "Correo" : "",
+                            "Clave1" : "",
+                            "Clave2": "",
                 };
             this.oParrafo = document.getElementById("listaDatos");
             // referencia del párrafo donde escribir
@@ -35,6 +38,11 @@
             this.oDatos.Dirección = document.getElementById("address").value;
             this.oDatos.Ciudad = document.getElementById("city").value;
             this.oDatos.Comentarios = document.getElementById("coment").value;
+            this.oDatos.Address = document.getElementById("Correo").value;
+            this.oDatos.Clave1 = document.getElementById("Clave1").value;
+            this.oDatos.Clave2 = document.getElementById("Clave1").value;
+            
+                                    
             //llamada a la función que procesara el objeto presentandolo en pantalla
             this.escribeDatos();
             oE.preventDefault();
@@ -81,9 +89,7 @@
  
  
   	<header>
-  	<h1 title="Formulario 1">
-  		Inscripción como docente (Tajamar)
-    </h1>
+  	<h1 title="Formulario 1">Formulario en JavaScript</h1>
 	</header>
   	<aside>
   		<noscript>
@@ -102,7 +108,7 @@
 	            <p><label for="apell">Apellido:</label>
 	      	        <input type="text" id="apell" name="apell" size="30" maxlength="100" placeholder="Escriba sus apellidos">
                 </p>      
-	            <p><label for="address">Domicilio:</label>
+	            <p><label for="address">Correo:</label>
 	      	        <input type="text" id="address" name="address" size="30"maxlength="200" placeholder="Escriba su dirección">
                 </p>
 	            <p><label for="city">Ciudad:</label>
@@ -111,25 +117,99 @@
 		        <p><label class="top" for="coment">Comentarios:</label>
 			        <textarea id="coment" name="coment" placeholder="Escriba los comentarios que consideres oprtunos"> </textarea>
                 </p>
-			</fieldset>	
 
-			<fieldset>
+		  	<fieldset class="Izquierda"><legend>Identificación</legend>
+		   		<label for="Correo">
+		   			<span class="label">Cuenta de correo</span>
+		    		<input name="Correo" id="Correo" title="Introduzca su direcci&oacute;n de correo" maxlength="50"  placeholder="cuenta@dominio.com" type="email">	
+		   		</label>
+		   		<label for="Clave1">
+		   			<span class="label">Introduzca su clave de acceso</span>
+		    		<input id="Clave1" maxlenght="10" name="Clave1" type="password" /> 
+		   		</label>
+		   		<label for="Clave2">
+		   			<span class="label">Repita la clave de acceso</span>
+		    		<input id="Clave2" maxlenght="10" name="Clave2" type="password" />
+		   		</label>
+		  	</fieldset>
+
+			
+            	<fieldset id="fsCurso" class="Izquierda"><legend>Curso</legend>
+		  		<div class="Izquierda">
+			   		<label for="web">
+					 	<input type="radio" name="Curso" checked id="web" value="web"/>
+						Programador Web</label>
+			     	<label for="sistemas">
+				     	<input type="radio" name="Curso" id="sistemas" value="sistemas" />
+				     	Programador de Sistemas</label>	
+			  		<label for="objeto">
+				     	<input type="radio" name="Curso" id="objeto" value="objeto" />
+				     	Programador de Objetos</label>
+		  		</div>
+			     <div class="Derecha">
+				     <label>		     	
+				   		<select id="Materias" name="Materias" size="4" > 
+					    	<option value="1">Html</option>
+					    	<option value="2">CSS</option>
+					    	<option value="3">JavaScript</option>
+					    	<option value="4">PHP</option>
+				   		</select>
+				     </label>	
+			     </div>
+		    </fieldset>
+			<fieldset id="fsAficiones" class="Derecha"><legend>Aficiones</legend>
+			   	<div class="Izquierda">
+				   	<label for="Musica">
+				   		<input type="checkbox" id="Musica" name="Musica" />Música
+					</label>
+					<label for="Viajar">
+						<input class="aficiones" type="checkbox" id="Viajar" name="Viajar" />Viajar
+					 </label>
+					<label for="Pintura">
+						<input class="aficiones" type="checkbox" id="Pintura" name="Pintura" />Pintura </label>
+				    <label for="Foto">
+				    	<input class="aficiones" type="checkbox" id="Foto" name="Foto" />Fotografía
+				    </label>
+			   	</div>
+			   	<div class="Derecha">
+				   	<label for="Cine">
+				   		<input type="checkbox" id="Cine" name="Cine" />Cine
+				   	</label>
+				    <label for="Lectura">
+				    	<input class="aficiones" type="checkbox" id="Lectura" name="Lectura" />Lectura
+				    </label>
+				    <label for="Deporte">
+				    	<input class="aficiones" type="checkbox" id="Deporte" name="Deporte" />Deporte
+				    </label>
+					<label for="Baile">
+						<input class="aficiones" type="checkbox" id="Baile" name="Baile" />Baile
+					</label>
+				</div>
+			    <input type="hidden" id="aficion" name="aficion" />
+			</fieldset>
+		 	<fieldset>
 			    <p><label></label>
                     <input id="submit" type="button" value="Aceptar"> &nbsp; 
 				    <input id="reset" type="reset" value="Borrar"></p>
 			</fieldset>
-		</form>
-
-		<div id="resultado" class="oculto">
+		 	<fieldset id="fsFechaFinal" class="Izquierda">
+		 		<p id="fechaHoy"></p>
+		 	</fieldset>
+	 	</fieldset>
+ 	</form>
+	 <div id="resultado" class="oculto">
 			<h2>Los datos del usuario son los siguientes</h2>			
 		<ul id="listaDatos"> </ul>
 		</div>	
-
-	</article>
+ 	</article>
+	
 	<footer>
-		<p>&copy; Copyright  by  Alejandro L. Cerezo</p>
-		<p><a href="mailto:alcerezo@microforum.es">alcerezo@micorforum.es</a></p>
+		<p>
+			&copy; Copyright by Daavid Baal
+		</p>
 	</footer>
  </body>
+
+</html>
 
 </html>
